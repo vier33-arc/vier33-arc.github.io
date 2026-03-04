@@ -23,6 +23,10 @@ export const Navigation = () => {
     }, [location.pathname]);
 
     const toggleMenu = () => setIsOpen(!isOpen);
+    const handleNavClick = () => {
+        setIsOpen(false);
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    };
 
     const links = [
         { name: 'Projekte', path: '/projekte' },
@@ -35,7 +39,7 @@ export const Navigation = () => {
         <>
             <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container nav-container">
-                    <Link to="/" className="brand-logo">
+                    <Link to="/" className="brand-logo" onClick={handleNavClick}>
                         vier33
                     </Link>
 
@@ -45,6 +49,7 @@ export const Navigation = () => {
                             <Link
                                 key={link.path}
                                 to={link.path}
+                                onClick={handleNavClick}
                                 className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
                             >
                                 {link.name}
@@ -74,6 +79,7 @@ export const Navigation = () => {
                                 <Link
                                     key={link.path}
                                     to={link.path}
+                                    onClick={handleNavClick}
                                     className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
                                 >
                                     {link.name}

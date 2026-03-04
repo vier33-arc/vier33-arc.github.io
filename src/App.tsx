@@ -8,12 +8,14 @@ import { Werkliste } from './pages/Werkliste';
 import { Kontakt } from './pages/Kontakt';
 import { ProjectDetail } from './pages/ProjectDetail';
 import { Projekte } from './pages/Projekte';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

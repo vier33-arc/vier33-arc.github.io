@@ -10,7 +10,8 @@
 .team-members {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+    row-gap: var(--spacing-xl);
+    column-gap: var(--spacing-md);
 }
 
 @media (min-width: 768px) {
