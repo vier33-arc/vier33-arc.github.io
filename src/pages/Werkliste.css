@@ -1,0 +1,97 @@
+.werkliste-container {
+    padding-bottom: var(--spacing-xl);
+}
+
+.werkliste-header {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    max-width: 800px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: padding-left var(--transition-normal);
+}
+
+@media (min-width: 768px) {
+    .list-item {
+        flex-direction: row;
+        align-items: baseline;
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+.list-item:hover {
+    padding-left: var(--spacing-sm);
+}
+
+.list-item-year {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary);
+    opacity: 0.7;
+    width: 150px;
+    flex-shrink: 0;
+    margin-bottom: var(--spacing-xs);
+}
+
+.list-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .list-item-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+.list-item-title {
+    font-size: var(--text-h3);
+    font-weight: 300;
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.list-item-number {
+    color: var(--text-primary);
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.list-item-category {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Link styling specifically for list items */
+.list-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.list-item-link .list-item-title {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.list-item-link:hover .list-item-title {
+    opacity: 0.5;
+}

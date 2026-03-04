@@ -1,0 +1,78 @@
+.kontakt-container {
+  padding-bottom: var(--spacing-xl);
+}
+
+.kontakt-content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xl) 0;
+  max-width: 800px;
+}
+
+.kontakt-title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.kontakt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .kontakt-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.kontakt-block {
+  margin-bottom: var(--spacing-md);
+}
+
+.kontakt-label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+.kontakt-text {
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.kontakt-link {
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 300;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-fast);
+}
+
+.kontakt-link:hover {
+  text-decoration-color: currentColor;
+}
+
+.kontakt-social {
+  margin-top: var(--spacing-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.kontakt-social:hover {
+  opacity: 0.7;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
